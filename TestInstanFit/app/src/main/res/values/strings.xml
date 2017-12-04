@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TestInstanFit</string>
+
+    <string name="txt_version">Version :</string>
+    <string name="error_conection">No hay conexión de red, intenta nuevamente</string>
+    <string name="empty_list">No se tiene contenido disponible</string>
+    <string name="trainers">Entrenadores</string>
+
+</resources>

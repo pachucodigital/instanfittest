@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="width_ic_logo_splash">200dp</dimen>
+    <dimen name="height_footer">50dp</dimen>
+    <dimen name="height_header">150dp</dimen>
+    <dimen name="low_margin">8dp</dimen>
+    <dimen name="medium_margin">16dp</dimen>
+    <dimen name="txt_size_title">14sp</dimen>
+    <dimen name="txt_size_header">20sp</dimen>
+    <dimen name="txt_size_footer">16sp</dimen>
+    <dimen name="txt_size_small">12sp</dimen>
+
+    <dimen name="width_ic_img">100dp</dimen>
+    <dimen name="height_ic_img">100dp</dimen>
+
+    <dimen name="width_ic_img_detail">160dp</dimen>
+    <dimen name="height_ic_img_detail">160dp</dimen>
+    <dimen name="heigth_card">120dp</dimen>
+
+</resources>

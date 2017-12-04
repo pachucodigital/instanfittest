@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+
+def STRING  = "String";
+def BOOLEAN = "boolean";
+def INTEGER = "Integer"
+def DEBUG_MODE_ENABLE ="DEBUG_MODE_ENABLE"
+def TAG_DEBUG_MODE ="TAG_DEBUG_MODE"
+def APPLICATION_HOST = "APPLICATION_HOST";
+
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "com.testinstanfit.daniel.ruiz"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField STRING , TAG_DEBUG_MODE, '"[InstanFit]"'
+        buildConfigField STRING , APPLICATION_HOST, '"  https://dev.instafit.com/api/v3.1/"'
+
+
+    }
+    buildTypes {
+        debug{
+            buildConfigField BOOLEAN, DEBUG_MODE_ENABLE, "true"
+            debuggable true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+
+    testCompile 'junit:junit:4.12'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.android.support:design:26.+'
+    compile 'com.android.support:cardview-v7:26.+'
+
+    //Retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+
+
+    //RxAndroid
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.1.6'
+
+
+    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+    compile 'com.google.code.gson:gson:2.6.2'
+}
